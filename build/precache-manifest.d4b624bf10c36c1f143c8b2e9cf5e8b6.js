@@ -4,16 +4,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/favicon.ico"
   },
   {
-    "revision": "c08d44066050d00234acd394c59ea330",
+    "revision": "1e274c5fb601fa5b1bfd4310472dc6d0",
     "url": "/index.html"
+  },
+  {
+    "revision": "895323ed2f7258af4fae2c738c8aea49",
+    "url": "/jquery.min.js"
   },
   {
     "revision": "6ead519905b7b907c00965be37dd5cd7",
     "url": "/logo.svg"
   },
   {
+    "revision": "e280794e865472eb0c30aed8511e596d",
+    "url": "/main.js"
+  },
+  {
     "revision": "1c82903c2994c2507b385b9042bbfac5",
     "url": "/manifest.json"
+  },
+  {
+    "revision": "93140e29fa68bab55ce6eae874ae674d",
+    "url": "/skel.min.js"
   },
   {
     "revision": "e50784e9a651826db559",
@@ -66,5 +78,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "542ba962741138d27b795723c2f6f627",
     "url": "/static/media/pic06.542ba962.jpg"
+  },
+  {
+    "revision": "fd2716a7b68ce7748c9676787b61db43",
+    "url": "/util.js"
   }
 ]);
