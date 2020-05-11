@@ -8,6 +8,7 @@ import Html.Attributes exposing (..)
 import Pages.About as About
 import Pages.AdultCourses as AdultCourses
 import Pages.Events as Events
+import Pages.Gallery as Gallery
 import Pages.GiftVouchers as GiftVouchers
 import Pages.Home as Home
 import Pages.Privacy as Privacy
@@ -45,6 +46,7 @@ type Page
     | Testimonials Testimonials.Model
     | GiftVouchers GiftVouchers.Model
     | Privacy Privacy.Model
+    | Gallery Gallery.Model
 
 
 
@@ -85,6 +87,7 @@ type Msg
     | TestimonialsMsg Testimonials.Msg
     | GiftVouchersMsg GiftVouchers.Msg
     | PrivacyMsg Privacy.Msg
+    | GalleryMsg Gallery.Msg
     | NoOp
 
 
@@ -202,6 +205,14 @@ update message model =
                 _ ->
                     ( model, Cmd.none )
 
+        GalleryMsg msg ->
+            case model.page of
+                Gallery m ->
+                    mapGalleryMsg model (Gallery.update msg m)
+
+                _ ->
+                    ( model, Cmd.none )
+
         NoOp ->
             ( model, Cmd.none )
 
@@ -254,6 +265,9 @@ view model =
 
         Privacy m ->
             Viewer.view session PrivacyMsg (Privacy.view m)
+
+        Gallery m ->
+            Viewer.view session GalleryMsg (Gallery.view m)
 
 
 
@@ -338,6 +352,11 @@ mapPrivacyMsg model ( m, cmds ) =
     ( { model | page = Privacy m }, Cmd.map PrivacyMsg cmds )
 
 
+mapGalleryMsg : Model -> ( Gallery.Model, Cmd Gallery.Msg ) -> ( Model, Cmd Msg )
+mapGalleryMsg model ( m, cmds ) =
+    ( { model | page = Gallery m }, Cmd.map GalleryMsg cmds )
+
+
 
 -- Extracts the session from the model
 
@@ -381,6 +400,9 @@ extractSession model =
             m.session
 
         Privacy m ->
+            m.session
+
+        Gallery m ->
             m.session
 
 
@@ -429,6 +451,9 @@ updateSession model session =
 
         Privacy m ->
             mapPrivacyMsg model (Privacy.init session)
+
+        Gallery m ->
+            mapGalleryMsg model (Gallery.init session)
 
 
 
@@ -492,6 +517,8 @@ parser model session =
             (mapGiftVouchersMsg model (GiftVouchers.init session))
         , route (Parser.s paths.privacy)
             (mapPrivacyMsg model (Privacy.init session))
+        , route (Parser.s paths.gallery)
+            (mapGalleryMsg model (Gallery.init session))
         ]
 
 
@@ -511,6 +538,7 @@ paths =
     , testimonials = "testimonials"
     , giftVouchers = "gift-vouchers"
     , privacy = "privacy"
+    , gallery = "gallery"
 
     --, newPage = "newpage"
     }

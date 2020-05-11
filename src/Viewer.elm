@@ -53,6 +53,7 @@ viewHeader session =
                 , a [ href "/testimonials" ] [ text "Testimonials" ]
                 , a [ href "/gift-vouchers" ] [ text "Gift Vouchers" ]
                 , a [ href "/privacy" ] [ text "Privacy" ]
+                , a [ href "/gallery" ] [ text "Gallery" ]
                 ]
             , a [ href "#navPanel", class "navPanelToggle" ]
                 [ span [ class "fas fa-bars" ] []

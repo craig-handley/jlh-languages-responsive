@@ -2903,7 +2903,7 @@ button:disabled,
 #banner h1 {
 	font-size: 3.5em;
 	font-weight: 100;
-	color: #fff;
+	color: white;
 	line-height: 1em;
 	margin: 0 0 0.5em 0;
 	padding: 0;
@@ -2912,8 +2912,8 @@ button:disabled,
 
 #banner p {
 	/* font-size: 1em; */
-	font-size: 1.2em;
-	color: rgba(255, 255, 255, 0.55);
+	font-size: 1.3em;
+	color: white;
 	margin-bottom: 1.75em;
 	font-weight: bold;
 }
