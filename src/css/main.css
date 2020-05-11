@@ -1512,7 +1512,8 @@ body,
 input,
 select,
 textarea {
-	color: #9a9a9a;
+	/* color: #9a9a9a; */
+	color: black;
 	font-family: "Raleway", Arial, Helvetica, sans-serif;
 	font-size: 13pt;
 	font-weight: 300;
@@ -1524,7 +1525,8 @@ textarea {
 	input,
 	select,
 	textarea {
-		font-size: 11pt;
+		/* font-size: 11pt; */
+		font-size: 12pt;
 	}
 }
 
@@ -1533,7 +1535,8 @@ textarea {
 	input,
 	select,
 	textarea {
-		font-size: 11pt;
+		/* font-size: 11pt; */
+		font-size: 12pt;
 	}
 }
 
@@ -1542,7 +1545,8 @@ textarea {
 	input,
 	select,
 	textarea {
-		font-size: 12pt;
+		/* font-size: 12pt; */
+		font-size: 13pt;
 	}
 }
 
@@ -1551,7 +1555,8 @@ textarea {
 	input,
 	select,
 	textarea {
-		font-size: 12pt;
+		/* font-size: 12pt; */
+		font-size: 13pt;
 	}
 }
 
@@ -1560,7 +1565,8 @@ textarea {
 	input,
 	select,
 	textarea {
-		font-size: 12pt;
+		/* font-size: 12pt; */
+		font-size: 13pt;
 	}
 }
 
@@ -2187,6 +2193,10 @@ input[type="radio"]+label:before {
 	position: relative;
 }
 
+.with-border {
+	border: 1px solid black;
+}
+
 .image img {
 	border-radius: 0;
 	display: block;
@@ -2226,6 +2236,20 @@ input[type="radio"]+label:before {
 
 .image.fit img {
 	width: 100%;
+}
+
+.image.fit.smaller img {
+	width:75%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.image.fit.smaller-still img {
+	width:50%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .image.main {
@@ -2671,7 +2695,7 @@ button:disabled,
 	left: 0;
 	line-height: 3.25em;
 	position: absolute;
-	text-align: right;
+	text-align: center;
 	top: 4em;
 	width: 100%;
 	z-index: 10001;
@@ -2947,10 +2971,12 @@ button:disabled,
 	padding: 0;
 	font-family: "Raleway", Arial, Helvetica, sans-serif;
 	font-weight: normal;
+	color: black;
 }
 
 #footer .copyright {
-	color: #bbb;
+	/* color: #bbb; */
+	color: black;
 	font-size: 0.8em;
 	margin: 0 0 2em 0;
 	padding: 0;

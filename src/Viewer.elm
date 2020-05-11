@@ -30,7 +30,7 @@ view : Session.Session -> (a -> msg) -> Details a -> Browser.Document msg
 view session msg details =
     { title = details.title ++ Utils.genericTitle
     , body =
-        [ div [ class details.baseClass ]
+        [ div [ id "top", class details.baseClass ]
             [ viewHeader session
             , Html.map msg <| div [] details.body
             , viewFooter session
@@ -45,8 +45,14 @@ viewHeader session =
         [ div [ class "inner" ]
             [ nav [ id "nav" ]
                 [ a [ href "/" ] [ text "Home" ]
-                , a [ href "/adultcourses" ] [ text "Adult Courses" ]
+                , a [ href "/adult-courses" ] [ text "Adult Courses" ]
+                , a [ href "/tutoring" ] [ text "Tutoring" ]
+                , a [ href "/schools" ] [ text "Schools" ]
+                , a [ href "/events" ] [ text "Events" ]
                 , a [ href "/about" ] [ text "About" ]
+                , a [ href "/testimonials" ] [ text "Testimonials" ]
+                , a [ href "/gift-vouchers" ] [ text "Gift Vouchers" ]
+                , a [ href "/privacy" ] [ text "Privacy" ]
                 ]
             , a [ href "#navPanel", class "navPanelToggle" ]
                 [ span [ class "fas fa-bars" ] []
@@ -145,13 +151,17 @@ notFound : Details msg
 notFound =
     { title = "Page Not Found"
     , body =
-        [ div [ class "not-found" ]
-            [ div [ style "font-size" "12em" ] [ text "404" ]
-            , h1 [ style "font-size" "3.5em" ] [ text "Page Not Found" ]
-            , h3 [ style "font-size" "1.5em" ]
-                [ text "Oops - Looks like you got lost or clicked a bad link! "
-                , a [ href "/" ] [ text "Click here " ]
-                , text "to go back to the home page."
+        [ section [ class "wrapper special" ]
+            [ div [ class "inner" ]
+                [ div [ class "not-found" ]
+                    [ div [ style "font-size" "12em" ] [ text "404" ]
+                    , h1 [ style "font-size" "3.5em" ] [ text "Page Not Found" ]
+                    , h3 [ style "font-size" "1.5em" ]
+                        [ text "Oops - Looks like you got lost or clicked a bad link! "
+                        , a [ href "/", style "text-decoration" "underline" ] [ text "Click here " ]
+                        , text "to go back to the home page."
+                        ]
+                    ]
                 ]
             ]
         ]

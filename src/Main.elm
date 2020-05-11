@@ -7,8 +7,18 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Pages.About as About
 import Pages.AdultCourses as AdultCourses
+import Pages.Events as Events
+import Pages.GiftVouchers as GiftVouchers
 import Pages.Home as Home
+import Pages.Privacy as Privacy
+import Pages.Schools as Schools
+import Pages.SchoolsFrench as SchoolsFrench
+import Pages.SchoolsSpanish as SchoolsSpanish
+import Pages.Testimonials as Testimonials
+import Pages.Tutoring as Tutoring
 import Session
+import SmoothScroll exposing (scrollTo)
+import Task exposing (Task)
 import Types.Flags
 import Url
 import Url.Parser as Parser exposing ((</>))
@@ -27,6 +37,14 @@ type Page
       -- | NewPage NewPage.Model
     | AdultCourses AdultCourses.Model
     | About About.Model
+    | Tutoring Tutoring.Model
+    | Schools Schools.Model
+    | Events Events.Model
+    | SchoolsFrench SchoolsFrench.Model
+    | SchoolsSpanish SchoolsSpanish.Model
+    | Testimonials Testimonials.Model
+    | GiftVouchers GiftVouchers.Model
+    | Privacy Privacy.Model
 
 
 
@@ -59,6 +77,15 @@ type Msg
       -- | NewPageMsg NewPage.Msg
     | AdultCoursesMsg AdultCourses.Msg
     | AboutMsg About.Msg
+    | TutoringMsg Tutoring.Msg
+    | SchoolsMsg Schools.Msg
+    | EventsMsg Events.Msg
+    | SchoolsFrenchMsg SchoolsFrench.Msg
+    | SchoolsSpanishMsg SchoolsSpanish.Msg
+    | TestimonialsMsg Testimonials.Msg
+    | GiftVouchersMsg GiftVouchers.Msg
+    | PrivacyMsg Privacy.Msg
+    | NoOp
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -70,7 +97,8 @@ update message model =
                 Browser.Internal url ->
                     -- If you'd like to use hash-based routing:
                     -- ( model, Nav.pushUrl model.key (Url.toString (toHashUrl url)) )
-                    ( model, Browser.Navigation.pushUrl model.key (Url.toString url) )
+                    -- ( model, Browser.Navigation.pushUrl model.key (Url.toString url) )
+                    ( model, Cmd.batch [ Browser.Navigation.pushUrl model.key (Url.toString url), Task.attempt (always NoOp) (scrollTo "top") ] )
 
                 Browser.External href ->
                     ( model, Browser.Navigation.load href )
@@ -110,6 +138,73 @@ update message model =
                 _ ->
                     ( model, Cmd.none )
 
+        TutoringMsg msg ->
+            case model.page of
+                Tutoring m ->
+                    mapTutoringMsg model (Tutoring.update msg m)
+
+                _ ->
+                    ( model, Cmd.none )
+
+        SchoolsMsg msg ->
+            case model.page of
+                Schools m ->
+                    mapSchoolsMsg model (Schools.update msg m)
+
+                _ ->
+                    ( model, Cmd.none )
+
+        EventsMsg msg ->
+            case model.page of
+                Events m ->
+                    mapEventsMsg model (Events.update msg m)
+
+                _ ->
+                    ( model, Cmd.none )
+
+        SchoolsFrenchMsg msg ->
+            case model.page of
+                SchoolsFrench m ->
+                    mapSchoolsFrenchMsg model (SchoolsFrench.update msg m)
+
+                _ ->
+                    ( model, Cmd.none )
+
+        SchoolsSpanishMsg msg ->
+            case model.page of
+                SchoolsSpanish m ->
+                    mapSchoolsSpanishMsg model (SchoolsSpanish.update msg m)
+
+                _ ->
+                    ( model, Cmd.none )
+
+        TestimonialsMsg msg ->
+            case model.page of
+                Testimonials m ->
+                    mapTestimonialsMsg model (Testimonials.update msg m)
+
+                _ ->
+                    ( model, Cmd.none )
+
+        GiftVouchersMsg msg ->
+            case model.page of
+                GiftVouchers m ->
+                    mapGiftVouchersMsg model (GiftVouchers.update msg m)
+
+                _ ->
+                    ( model, Cmd.none )
+
+        PrivacyMsg msg ->
+            case model.page of
+                Privacy m ->
+                    mapPrivacyMsg model (Privacy.update msg m)
+
+                _ ->
+                    ( model, Cmd.none )
+
+        NoOp ->
+            ( model, Cmd.none )
+
 
 
 ---- VIEW ----
@@ -135,6 +230,30 @@ view model =
 
         AdultCourses m ->
             Viewer.view session AdultCoursesMsg (AdultCourses.view m)
+
+        Tutoring m ->
+            Viewer.view session TutoringMsg (Tutoring.view m)
+
+        Schools m ->
+            Viewer.view session SchoolsMsg (Schools.view m)
+
+        Events m ->
+            Viewer.view session EventsMsg (Events.view m)
+
+        SchoolsFrench m ->
+            Viewer.view session SchoolsFrenchMsg (SchoolsFrench.view m)
+
+        SchoolsSpanish m ->
+            Viewer.view session SchoolsSpanishMsg (SchoolsSpanish.view m)
+
+        Testimonials m ->
+            Viewer.view session TestimonialsMsg (Testimonials.view m)
+
+        GiftVouchers m ->
+            Viewer.view session GiftVouchersMsg (GiftVouchers.view m)
+
+        Privacy m ->
+            Viewer.view session PrivacyMsg (Privacy.view m)
 
 
 
@@ -179,6 +298,46 @@ mapAdultCoursesMsg model ( m, cmds ) =
     ( { model | page = AdultCourses m }, Cmd.map AdultCoursesMsg cmds )
 
 
+mapTutoringMsg : Model -> ( Tutoring.Model, Cmd Tutoring.Msg ) -> ( Model, Cmd Msg )
+mapTutoringMsg model ( m, cmds ) =
+    ( { model | page = Tutoring m }, Cmd.map TutoringMsg cmds )
+
+
+mapSchoolsMsg : Model -> ( Schools.Model, Cmd Schools.Msg ) -> ( Model, Cmd Msg )
+mapSchoolsMsg model ( m, cmds ) =
+    ( { model | page = Schools m }, Cmd.map SchoolsMsg cmds )
+
+
+mapEventsMsg : Model -> ( Events.Model, Cmd Events.Msg ) -> ( Model, Cmd Msg )
+mapEventsMsg model ( m, cmds ) =
+    ( { model | page = Events m }, Cmd.map EventsMsg cmds )
+
+
+mapSchoolsFrenchMsg : Model -> ( SchoolsFrench.Model, Cmd SchoolsFrench.Msg ) -> ( Model, Cmd Msg )
+mapSchoolsFrenchMsg model ( m, cmds ) =
+    ( { model | page = SchoolsFrench m }, Cmd.map SchoolsFrenchMsg cmds )
+
+
+mapSchoolsSpanishMsg : Model -> ( SchoolsSpanish.Model, Cmd SchoolsSpanish.Msg ) -> ( Model, Cmd Msg )
+mapSchoolsSpanishMsg model ( m, cmds ) =
+    ( { model | page = SchoolsSpanish m }, Cmd.map SchoolsSpanishMsg cmds )
+
+
+mapTestimonialsMsg : Model -> ( Testimonials.Model, Cmd Testimonials.Msg ) -> ( Model, Cmd Msg )
+mapTestimonialsMsg model ( m, cmds ) =
+    ( { model | page = Testimonials m }, Cmd.map TestimonialsMsg cmds )
+
+
+mapGiftVouchersMsg : Model -> ( GiftVouchers.Model, Cmd GiftVouchers.Msg ) -> ( Model, Cmd Msg )
+mapGiftVouchersMsg model ( m, cmds ) =
+    ( { model | page = GiftVouchers m }, Cmd.map GiftVouchersMsg cmds )
+
+
+mapPrivacyMsg : Model -> ( Privacy.Model, Cmd Privacy.Msg ) -> ( Model, Cmd Msg )
+mapPrivacyMsg model ( m, cmds ) =
+    ( { model | page = Privacy m }, Cmd.map PrivacyMsg cmds )
+
+
 
 -- Extracts the session from the model
 
@@ -198,6 +357,30 @@ extractSession model =
             m.session
 
         AdultCourses m ->
+            m.session
+
+        Tutoring m ->
+            m.session
+
+        Schools m ->
+            m.session
+
+        Events m ->
+            m.session
+
+        SchoolsFrench m ->
+            m.session
+
+        SchoolsSpanish m ->
+            m.session
+
+        Testimonials m ->
+            m.session
+
+        GiftVouchers m ->
+            m.session
+
+        Privacy m ->
             m.session
 
 
@@ -222,6 +405,30 @@ updateSession model session =
 
         AdultCourses m ->
             mapAdultCoursesMsg model (AdultCourses.init session)
+
+        Tutoring m ->
+            mapTutoringMsg model (Tutoring.init session)
+
+        Schools m ->
+            mapSchoolsMsg model (Schools.init session)
+
+        Events m ->
+            mapEventsMsg model (Events.init session)
+
+        SchoolsFrench m ->
+            mapSchoolsFrenchMsg model (SchoolsFrench.init session)
+
+        SchoolsSpanish m ->
+            mapSchoolsSpanishMsg model (SchoolsSpanish.init session)
+
+        Testimonials m ->
+            mapTestimonialsMsg model (Testimonials.init session)
+
+        GiftVouchers m ->
+            mapGiftVouchersMsg model (GiftVouchers.init session)
+
+        Privacy m ->
+            mapPrivacyMsg model (Privacy.init session)
 
 
 
@@ -267,8 +474,24 @@ parser model session =
         --     (mapNewPageMsg model (NewPage.init session))
         , route (Parser.s paths.about)
             (mapAboutMsg model (About.init session))
-        , route (Parser.s paths.adultcourses)
+        , route (Parser.s paths.adultCourses)
             (mapAdultCoursesMsg model (AdultCourses.init session))
+        , route (Parser.s paths.tutoring)
+            (mapTutoringMsg model (Tutoring.init session))
+        , route (Parser.s paths.schools)
+            (mapSchoolsMsg model (Schools.init session))
+        , route (Parser.s paths.events)
+            (mapEventsMsg model (Events.init session))
+        , route (Parser.s paths.schoolsFrench)
+            (mapSchoolsFrenchMsg model (SchoolsFrench.init session))
+        , route (Parser.s paths.schoolsSpanish)
+            (mapSchoolsSpanishMsg model (SchoolsSpanish.init session))
+        , route (Parser.s paths.testimonials)
+            (mapTestimonialsMsg model (Testimonials.init session))
+        , route (Parser.s paths.giftVouchers)
+            (mapGiftVouchersMsg model (GiftVouchers.init session))
+        , route (Parser.s paths.privacy)
+            (mapPrivacyMsg model (Privacy.init session))
         ]
 
 
@@ -279,7 +502,15 @@ parser model session =
 paths =
     { home = ""
     , about = "about"
-    , adultcourses = "adultcourses"
+    , adultCourses = "adult-courses"
+    , tutoring = "tutoring"
+    , schools = "schools"
+    , events = "events"
+    , schoolsFrench = "schools-french"
+    , schoolsSpanish = "schools-spanish"
+    , testimonials = "testimonials"
+    , giftVouchers = "gift-vouchers"
+    , privacy = "privacy"
 
     --, newPage = "newpage"
     }
