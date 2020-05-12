@@ -2701,6 +2701,12 @@ button:disabled,
 	z-index: 10001;
 }
 
+@media screen and (max-width: 1200px) {
+	#header {
+		text-align: right;
+	}
+}
+
 #header .inner {
 	margin: 0 auto;
 	position: relative;
@@ -2730,7 +2736,7 @@ button:disabled,
 	color: inherit;
 	text-decoration: none;
 	/* font-size: .8em; */
-	font-size: 1.2em;
+	font-size: 1.1em;
 	font-weight: bold;
 }
 
@@ -2754,7 +2760,13 @@ button:disabled,
 	font-size: 1.25em;
 }
 
-@media screen and (max-width: 980px) {
+/* @media screen and (max-width: 980px) {
+	#header a.navPanelToggle {
+		display: inline-block;
+	}
+} */
+
+@media screen and (max-width: 1200px) {
 	#header a.navPanelToggle {
 		display: inline-block;
 	}
@@ -2790,7 +2802,13 @@ button:disabled,
 
 /* Nav */
 
-@media screen and (max-width: 980px) {
+/* @media screen and (max-width: 980px) {
+	#nav {
+		display: none;
+	}
+} */
+
+@media screen and (max-width: 1200px) {
 	#nav {
 		display: none;
 	}

@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/favicon.ico"
   },
   {
-    "revision": "dc53c769beb6bcf6afc32b4751a2bf60",
+    "revision": "3295ee118192dea13d01ade08e74cf5a",
     "url": "/index.html"
   },
   {
@@ -32,12 +32,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/skel.min.js"
   },
   {
-    "revision": "1e29a0ac923654b88cc6",
-    "url": "/static/css/main.bd5c7d4d.chunk.css"
+    "revision": "2fb8209d80d680910f15",
+    "url": "/static/css/main.5d20759a.chunk.css"
   },
   {
-    "revision": "1e29a0ac923654b88cc6",
-    "url": "/static/js/main.1e29a0ac.chunk.js"
+    "revision": "2fb8209d80d680910f15",
+    "url": "/static/js/main.2fb8209d.chunk.js"
   },
   {
     "revision": "1b922744246c39b6bc43",
