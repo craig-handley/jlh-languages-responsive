@@ -68,7 +68,16 @@ viewFooter session =
         [ div [ class "inner" ]
             [ div [ class "flex" ]
                 [ div [ class "copyright" ]
-                    [ text "© 2020 JLH Languages. All rights reserved."
+                    [ a [ rel "license", href "http://creativecommons.org/licenses/by/3.0/" ]
+                        [ img [ alt "Creative Commons License", style "border-width" "0", src "https://i.creativecommons.org/l/by/3.0/80x15.png" ] []
+                        ]
+                    , br [] []
+                    , div []
+                        [ text "This work is licensed under a "
+                        , a [ rel "license", href "http://creativecommons.org/licenses/by/3.0/" ]
+                            [ text "Creative Commons Attribution 3.0 Unported License"
+                            ]
+                        ]
                     ]
                 , ul [ class "icons" ]
                     [ li [] [ a [ href "https://www.facebook.com/JLHLanguages/", class "icon fab fa-facebook-square", target "_blank" ] [ span [ class "footer-text" ] [ text "Find us on Facebook" ] ] ]
@@ -81,70 +90,6 @@ viewFooter session =
 
 
 
--- div []
---     [ div [ class "footer", class "container" ]
---         [ buildNav ]
---     , div [ class "footer2", class "container" ]
---         [ img [ src session.images.email ] []
---         , text "jane@jlhlanguages.org"
---         , img [ src session.images.phone ] []
---         , text "07793 556020"
---         , a [ href "https://www.facebook.com/pg/JLHLanguages/posts/?ref=page_internal" ] [ img [ src session.images.facebook ] [] ]
---         , text "Find us on Facebook"
---         ]
---     ]
--- HEADER
--- This header is statically generated. You'd likely want this to be dynamic in some way based on the active page & session
--- You could create an additional field in Viewer.Details for a header, and create this header in Main.elm or in each individual page's view
--- buildNav : Html msg
--- buildNav =
---     div [ class "nav-links" ]
---         [ a [ href "/" ] [ text "Home" ]
---         , text " | "
---         , a [ href "/adult-courses" ] [ text "Adult Courses" ]
---         , text " | "
---         , a [ href "/tutoring" ] [ text "Tutoring" ]
---         , text " | "
---         , a [ href "/schools" ] [ text "Schools" ]
---         , text " | "
---         , a [ href "/events" ] [ text "Events" ]
---         , text " | "
---         , a [ href "/about" ] [ text "About" ]
---         , text " | "
---         , a [ href "/testimonials" ] [ text "Testimonials" ]
---         , text " | "
---         , a [ href "/gift-vouchers" ] [ text "Gift Vouchers" ]
---         , text " | "
---         , a [ href "/privacy" ] [ text "Privacy" ]
---         , text " | "
---         , a [ href "/gallery" ] [ text "Gallery" ]
---         -- , text " | "
---         --    , a [ href "newpage" ] [ text "New Page" ]
---         ]
--- viewHeader : Session.Session -> Html msg
--- viewHeader session =
---     div []
---         [ div [ class "header", class "container" ]
---             [ buildNav ]
---         , div [ class "header2", class "container", class "jlh-logo" ]
---             [ img [ src session.images.logo ] []
---             ]
---         ]
--- FOOTER
--- viewFooter : Session.Session -> Html msg
--- viewFooter session =
---     div []
---         [ div [ class "footer", class "container" ]
---             [ buildNav ]
---         , div [ class "footer2", class "container" ]
---             [ img [ src session.images.email ] []
---             , text "jane@jlhlanguages.org"
---             , img [ src session.images.phone ] []
---             , text "07793 556020"
---             , a [ href "https://www.facebook.com/pg/JLHLanguages/posts/?ref=page_internal" ] [ img [ src session.images.facebook ] [] ]
---             , text "Find us on Facebook"
---             ]
---         ]
 -- 404 PAGE (NotFound)
 
 
