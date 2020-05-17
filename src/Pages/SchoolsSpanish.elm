@@ -72,18 +72,32 @@ view model =
                         , p [] [ text "There are several food options:" ]
                         , header []
                             [ h3 []
-                                [ text "Spanish Breakfast From approx. £15.00 per student"
+                                [ text "Spanish Breakfast"
+                                ]
+                            , h4 []
+                                [ text "From £15.00 per student"
                                 ]
                             ]
-                        , p [] [ text "Spanish breakfast consisting of bollo, bread, plain biscuits, a hot drink and a selection of fruit (to promote healthy eating and expand students’ vocabulary.) Spanish omelette is also available. Students order everything in Spanish and are served by Spanish speaking waiting staff. This experience includes a range of language activities. For example, students use their knowledge of Spanish to sort out problems during the meal, give detailed opinions about their meal or discuss healthy eating issues relating to their food. A full list of vocabulary can be given to the school prior to the event so that it can be covered in advance. This will allow students to use their language spontaneously, increasing their confidence and motivation." ]
+                        , p [] [ text "Spanish breakfast consisting of bollo, bread, plain biscuits, a hot drink and a selection of fruit (to promote healthy eating and expand students’ vocabulary.) Spanish omelette is also available. Students order everything in Spanish and are served by Spanish speaking waiting staff." ]
+                        , p [] [ text "This experience includes a range of language activities. For example, students use their knowledge of Spanish to sort out problems during the meal, give detailed opinions about their meal or discuss healthy eating issues relating to their food. A full list of vocabulary can be given to the school prior to the event so that it can be covered in advance. This will allow students to use their language spontaneously, increasing their confidence and motivation." ]
                         , p [] [ text "Optional extras: Additional language activities can be organised on topics of the school’s choice e.g.a GCSE preparation activity based on role plays for the speaking exam." ]
                         , p [] [ text "Arrival 9.30 a.m. Depart 11.30 a.m." ]
                         , header []
                             [ h3 []
-                                [ text "Spanish 3-course meal From approx. £26.00 per student"
+                                [ text "Spanish 3-course meal"
+                                ]
+                            , h4 []
+                                [ text "From £26.00 per student"
                                 ]
                             ]
-                        , p [] [ text "Students order a 3 course meal and a drink in Spanish. The level of language and the language activities delivered can be tailored to the ability and objectives of the group. A typical meal may include the following (please note this is a sample menu to give an idea of the range of dishes offered): Starters: paella, arroz a la cubana, macorrones, ensalada mixta, tortilla paisana Mains: pollo asado, albóndigas en salsa, pisto, stuffed peppers Desserts: rice pudding, fresh fruit, flan: creme caramel, mousse de chocolate" ]
+                        , p [] [ text "Students order a 3 course meal and a drink in Spanish. The level of language and the language activities delivered can be tailored to the ability and objectives of the group. A typical meal may include the following (please note this is a sample menu to give an idea of the range of dishes offered):" ]
+                        , p []
+                            [ text "Starters: paella, arroz a la cubana, macorrones, ensalada mixta, tortilla paisana"
+                            , br [] []
+                            , text "Mains: pollo asado, albóndigas en salsa, pisto, stuffed peppers"
+                            , br [] []
+                            , text "Desserts: rice pudding, fresh fruit, flan: creme caramel, mousse de chocolate"
+                            ]
                         , p [] [ text "Arrival midday Departure 2.00 p.m." ]
                         , p [] [ text "Prices: The prices quoted do NOT include transport to and from the venue." ]
                         , div [ class "image fit smaller" ]

@@ -75,26 +75,42 @@ view model =
                         , p [] [ text "There are several food options:" ]
                         , header []
                             [ h3 []
-                                [ text "Formule A: Niveau débutant From £15.00 per student"
+                                [ text "Formule A: Niveau débutant (for primary school students)"
+                                ]
+                            , h4 []
+                                [ text "From £15.00 per student"
                                 ]
                             ]
                         , p [] [ text "French breakfast consisting of a selection of pastries (croissant, pain au chocolat, tartines avec de la confiture / du miel / du nutella), a hot drink and a selection of fruit (to promote healthy eating and expand students’ vocabulary.) Students order everything in French." ]
-                        , p [] [ text "Arrival 9.30 a.m. Depart 11.00 a.m." ]
+                        , p [] [ text "Arrival 9.30 a.m. Depart 11.30 a.m." ]
                         , header []
                             [ h3 []
-                                [ text "Formule B: Niveau intermédiare From £15.00 per student"
+                                [ text "Formule B: Niveau intermédiare"
+                                ]
+                            , h4 []
+                                [ text "From £15.00 per student"
                                 ]
                             ]
                         , p [] [ text "This includes Formule A above but it also includes more challenging language activities. For example, students may have to use their knowledge of French to sort out problems during the meal, give detailed opinions about their meal or discuss healthy eating issues relating to their food. A full list of vocabulary can be given to the school prior to the event so that it can be covered in advance. This will allow students to use their language spontaneously, increasing their confidence and motivation. Students order everything in French." ]
-                        , p [] [ text "Arrival 9.30 a.m. Depart 11.00 a.m." ]
+                        , p [] [ text "Arrival 9.30 a.m. Depart 11.30 a.m." ]
                         , header []
                             [ h3 []
-                                [ text "Formule C: Pour les gourmands From £26.00 per student"
+                                [ text "Formule C: Pour les gourmands"
+                                ]
+                            , h4 []
+                                [ text "From £26.00 per student"
                                 ]
                             ]
-                        , p [] [ text "Students order a 3 course meal and a drink in French. The level of language and the language activities delivered can be tailored to the ability and objectives of the group. A typical meal may include the following (please note this is a sample menu to give an idea of the range of dishes offered): Starters: Salade de chèvre chaud, soupe à l’oignon, terrine de campagne maison, melon Mains: Boeuf bourgignon, omelette, coq au vin, poulet rôti Sides: légumes, riz, pâtes Desserts: glace aux choix, crème caramel, mousse au chocolat, salade de fruits" ]
+                        , p [] [ text "Students order a 3 course meal and a drink in French. The level of language and the language activities delivered can be tailored to the ability and objectives of the group. A typical meal may include the following (please note this is a sample menu to give an idea of the range of dishes offered):" ]
+                        , p []
+                            [ text "Starters: Salade de chèvre chaud, soupe à l’oignon, terrine de campagne maison, melon"
+                            , br [] []
+                            , text "Mains: Boeuf bourgignon, omelette, coq au vin, poulet rôti Sides: légumes, riz, pâtes"
+                            , br [] []
+                            , text "Desserts: glace aux choix, crème caramel, mousse au chocolat, salade de fruits"
+                            ]
                         , p [] [ text "Arrival midday Depart 2.00 p.m." ]
-                        , p [] [ text "Prices: The prices quoted do NOT include transport to and from the venue. Normally schools prefer to use their own school transport or work with transport companies they are familiar with. If transport is required, please state this when asking for a quote and it can be included in the total price." ]
+                        , p [] [ text "Prices: The prices quoted do NOT include transport to and from the venue. Normally schools prefer to use their own school transport or work with transport companies they are familiar with." ]
                         , div [ class "image fit smaller" ]
                             [ img [ src model.session.images.schools_french_05, class "with-border" ] []
                             ]
@@ -110,7 +126,8 @@ view model =
                         , p [] [ text "Students will be required to speak French to order a meal. The successful completion of this task provides concrete proof to the students themselves that they can actually \"do\" French and this can build confidence and enhance motivation." ]
                         , p [] [ text "Using French in an unscripted way develops students’ coping mechanisms which are relevant in exam situations. It can help students understand that their spoken language does not have to be perfect as long as their message is conveyed." ]
                         , p [] [ text "Cross-curricular issues such as healthy eating issues are addressed. Every menu includes a healthy option and students can discuss the pros and cons of their meal choices (Please note that none of our meals are accompanied by chips which requires students to choose a healthier option.)" ]
-                        , p [] [ text "Visit are tailored to meet the specific objectives of each individual group e.g. to motivate reluctant learners, to stretch the most able, the increase confidence of students when speaking, to increase spontaneity etc. Revision sessions on specific topics (which take place after the meal) are available. Specific cross-curricular themes can be included: numeracy, healthy eating, food technology, music, authentic texts......" ]
+                        , p [] [ text "Visit are tailored to meet the specific objectives of each individual group e.g. to motivate reluctant learners, to stretch the most able, the increase confidence of students when speaking, to increase spontaneity etc." ]
+                        , p [] [ text "Revision sessions on specific topics (which take place after the meal) are available. Specific cross-curricular themes can be included: numeracy, healthy eating, food technology, music, authentic texts......" ]
                         , p [] [ text "When students return to their classroom after the visit, they appreciate that the language they are learning is real i.e. that French is not simply an academic subject but is one with real value and purpose." ]
                         , header []
                             [ h3 []

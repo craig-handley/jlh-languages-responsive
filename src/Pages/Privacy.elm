@@ -106,7 +106,8 @@ view model =
                             ]
                         , p [] [ text "You have the right as an individual to access your personal information we hold about you and make corrections if necessary. You also have the right to withdraw any consent you have previously given us and ask us to erase information we hold about you. You can also object to us using your personal information (where we rely on our business interests to process and use your personal information). You have the right to: Ask for a copy of the information that we hold about you; Correct and update your information; Withdraw your consent (where we rely on it). Object to our use of your information (where we rely on our legitimate interests to use your personal information) provided we do not have any continuing lawful reason to continue to use and process the information.  When we do rely on our legitimate interests to use your personal information for direct marketing, we will always comply with your right to object; Erase your information (or restrict the use of it), provided we do not have any continuing lawful reason to continue to use and process that information; Transfer your information in a structured data file (in a commonly used and machine readable format), where we rely on your consent to use and process your personal information or need to process it in connection with your contract." ]
                         , p [] [ text "You can exercise the above rights and/or manage your information by contacting us using the details below:" ]
-                        , p [] [ text "Post: JLH Languages, 11 The Croft, Cheslyn Hay, Walsall WS6 7QB" ]
+
+                        -- , p [] [ text "Post: JLH Languages, 11 The Croft, Cheslyn Hay, Walsall WS6 7QB" ]
                         , p [] [ text "Email: jane@jlhlanguages.org" ]
                         , p [] [ text "Phone: 07793 556020" ]
                         ]

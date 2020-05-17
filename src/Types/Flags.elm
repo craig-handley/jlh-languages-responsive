@@ -57,6 +57,23 @@ type alias Flags =
         , gallery_28 : String
         , gallery_29 : String
         , gallery_30 : String
+        , gallery_2019_11_01 : String
+        , gallery_2019_12_01 : String
+        , gallery_2019_12_02 : String
+        , gallery_2019_12_03 : String
+        , gallery_2019_12_04 : String
+        , gallery_2019_12_05 : String
+        , gallery_2019_12_06 : String
+        , gallery_2020_01_01 : String
+        , gallery_2020_01_02 : String
+        , gallery_2020_01_03 : String
+        , gallery_2020_01_04 : String
+        , gallery_2020_01_05 : String
+        , gallery_2020_01_06 : String
+        , gallery_2020_01_07 : String
+        , gallery_2020_03_01 : String
+        , gallery_2020_03_02 : String
+        , adult_courses_01 : String
         , pic01 : String
         , pic02 : String
         , pic03 : String

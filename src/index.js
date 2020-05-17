@@ -8,7 +8,7 @@ import about_01 from './img/about_01.jpg';
 import courses from './json/courses.json'
 import tutoring_01 from './img/tutoring_01.png';
 import tutoring_02 from './img/tutoring_02.png';
-import schools_french from './img/schools_french.jpg';
+import schools_french from './img/schools_french.png';
 import schools_spanish from './img/schools_spanish.jpg';
 import events_01 from './img/events_01.png';
 import schools_french_01 from './img/schools_french_01.jpg';
@@ -55,6 +55,23 @@ import gallery_27 from './img/gallery_27.jpg';
 import gallery_28 from './img/gallery_28.jpg';
 import gallery_29 from './img/gallery_29.jpg';
 import gallery_30 from './img/gallery_30.jpg';
+import gallery_2019_11_01 from './img/gallery_2019_11_01.jpg';
+import gallery_2019_12_01 from './img/gallery_2019_12_01.jpg';
+import gallery_2019_12_02 from './img/gallery_2019_12_02.jpg';
+import gallery_2019_12_03 from './img/gallery_2019_12_03.jpg';
+import gallery_2019_12_04 from './img/gallery_2019_12_04.jpg';
+import gallery_2019_12_05 from './img/gallery_2019_12_05.jpg';
+import gallery_2019_12_06 from './img/gallery_2019_12_06.jpg';
+import gallery_2020_01_01 from './img/gallery_2020_01_01.jpg';
+import gallery_2020_01_02 from './img/gallery_2020_01_02.jpg';
+import gallery_2020_01_03 from './img/gallery_2020_01_03.jpg';
+import gallery_2020_01_04 from './img/gallery_2020_01_04.jpg';
+import gallery_2020_01_05 from './img/gallery_2020_01_05.jpg';
+import gallery_2020_01_06 from './img/gallery_2020_01_06.jpg';
+import gallery_2020_01_07 from './img/gallery_2020_01_07.jpg';
+import gallery_2020_03_01 from './img/gallery_2020_03_01.png';
+import gallery_2020_03_02 from './img/gallery_2020_03_02.jpg';
+import adult_courses_01 from './img/adult_courses_01.jpg';
 
 import pic01 from './img/pic01.jpg';
 import pic02 from './img/pic02.jpg';
@@ -123,6 +140,23 @@ function generateFlags() {
       gallery_28,
       gallery_29,
       gallery_30,
+      gallery_2019_11_01,
+      gallery_2019_12_01,
+      gallery_2019_12_02,
+      gallery_2019_12_03,
+      gallery_2019_12_04,
+      gallery_2019_12_05,
+      gallery_2019_12_06,
+      gallery_2020_01_01,
+      gallery_2020_01_02,
+      gallery_2020_01_03,
+      gallery_2020_01_04,
+      gallery_2020_01_05,
+      gallery_2020_01_06,
+      gallery_2020_01_07,
+      gallery_2020_03_01,
+      gallery_2020_03_02,
+      adult_courses_01,
 
       pic01,
       pic02,

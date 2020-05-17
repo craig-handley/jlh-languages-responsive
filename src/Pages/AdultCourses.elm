@@ -93,6 +93,7 @@ view model =
 
                     --, p [] [ text "Aliquam erat volutpat nam dui " ]
                     ]
+                , h3 [ style "color" "red" ] [ text "Unfortunately due to Coronavirus our face-to-face lessons are currently suspended. However lessons continue to take place online. Please email jane@jlhlanguages.org for details." ]
                 , div [ class "flex flex-1" ]
                     [ article []
                         [ header []
@@ -111,6 +112,9 @@ view model =
                         , p [] [ text "If you are interested in attending a course at any of these locations please get in touch (jane@jlhlanguages.org / 07793 556020) stating the venue(s) of interest and the relevant French course (beginner / mixed ability / intermediate / advanced.)" ]
                         , p [] [ text "If none of these locations are suitable please send details of a town / village near you and we will do our best to accommodate your request." ]
                         ]
+                    ]
+                , div [ class "image fit smaller-still" ]
+                    [ img [ src model.session.images.adult_courses_01, class "with-border" ] []
                     ]
                 , div [ class "flex flex-1" ]
                     [ article []

@@ -67,6 +67,8 @@ view model =
                         , div [ class "image fit", style "width" "10em" ]
                             [ img [ src model.session.images.about_01 ] []
                             ]
+                        , p [] [ text "Email: jane@jlhlanguages.org" ]
+                        , p [] [ text "Phone: 07793 556020" ]
                         ]
                     , article []
                         [ header []

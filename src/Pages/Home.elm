@@ -59,10 +59,9 @@ view model =
     { title = toTitle
     , body =
         [ section [ id "banner", style "background-image" backgroundImageStyle ]
-            [ h1 [] [ text "JLH Languages" ]
-            , p [] [ text "Participate   -   Stimulate   -   Communicate" ]
-
-            --img [ src model.session.images.logo, style "width" "25em" ] []
+            [ --     h1 [] [ text "JLH Languages" ]
+              -- , p [] [ text "Participate   -   Stimulate   -   Communicate" ]
+              img [ src model.session.images.logo, style "max-width" "50%" ] []
             ]
 
         {--One--}
@@ -125,7 +124,7 @@ view model =
                             [ text "This is the reason why I have teamed up with restaurants in my local area to offer a fun, effective and hassle-free alternative to a foreign trip."
                             ]
                         , p []
-                            [ text "Our aim is to give students a taste of being in a French restaurant whilst remaining in the UK. The restaurants I am currently working with are based in Cannock (South Staffordshire) although I do have plans to expand to other regions."
+                            [ text "Our aim is to give students a taste of being in a restaurant abroad whilst remaining in the UK. The restaurants I am currently working with are based in Cannock (South Staffordshire) although I do have plans to expand to other regions."
                             ]
                         , p []
                             [ text "We can cater for groups up to a maximum of 30 students. We cater for all dietary requirements (e.g. vegetarians, vegans, food allergies, Halal meals) so that all students can participate fully and benefit from this experience."
