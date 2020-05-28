@@ -2,6 +2,7 @@ module Pages.Gallery exposing (Model, Msg(..), init, update, view)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
+import Html.Events exposing (..)
 import Session
 import Viewer
 
@@ -12,6 +13,8 @@ import Viewer
 
 type alias Model =
     { session : Session.Session
+    , isModalOpen : Bool
+    , modalImg : String
     }
 
 
@@ -21,7 +24,7 @@ type alias Model =
 
 init : Session.Session -> ( Model, Cmd Msg )
 init session =
-    ( Model session, Cmd.none )
+    ( Model session False "", Cmd.none )
 
 
 
@@ -30,6 +33,8 @@ init session =
 
 type Msg
     = NoOp
+    | ShowModal String
+    | HideModal
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -38,9 +43,38 @@ update msg model =
         NoOp ->
             ( model, Cmd.none )
 
+        ShowModal img ->
+            ( { model | isModalOpen = True, modalImg = img }, Cmd.none )
+
+        HideModal ->
+            ( { model | isModalOpen = False, modalImg = "" }, Cmd.none )
+
 
 
 -- VIEW
+
+
+modalView : Model -> Html Msg
+modalView model =
+    if model.isModalOpen then
+        div [ class "modal-background" ]
+            [ span [ class "close", onClick HideModal ]
+                [ text "x"
+                ]
+            , img [ class "modal-content", src model.modalImg ] []
+            ]
+
+    else
+        div [] []
+
+
+setupImg : String -> String -> Html Msg
+setupImg class_ src_ =
+    div [ class class_ ]
+        [ span [ class "image fit cursor-pointer" ]
+            [ img [ src src_, class "with-border", onClick (ShowModal src_) ] []
+            ]
+        ]
 
 
 view : Model -> Viewer.Details Msg
@@ -59,16 +93,8 @@ view model =
                         [ text "March 2020"
                         ]
                     , div [ class "row 50% uniform" ]
-                        [ div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_2020_03_01, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u$" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_2020_03_02, class "with-border" ] []
-                                ]
-                            ]
+                        [ setupImg "4u" model.session.images.gallery_2020_03_01
+                        , setupImg "4u$" model.session.images.gallery_2020_03_02
                         ]
 
                     {--break--}
@@ -77,36 +103,12 @@ view model =
                         [ text "January 2020 : Galette des Rois"
                         ]
                     , div [ class "row 50% uniform" ]
-                        [ div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_2020_01_01, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_2020_01_02, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u$" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_2020_01_03, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_2020_01_04, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_2020_01_05, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u$" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_2020_01_06, class "with-border" ] []
-                                ]
-                            ]
+                        [ setupImg "4u" model.session.images.gallery_2020_01_01
+                        , setupImg "4u" model.session.images.gallery_2020_01_02
+                        , setupImg "4u$" model.session.images.gallery_2020_01_03
+                        , setupImg "4u" model.session.images.gallery_2020_01_04
+                        , setupImg "4u" model.session.images.gallery_2020_01_05
+                        , setupImg "4u$" model.session.images.gallery_2020_01_06
                         ]
 
                     {--break--}
@@ -115,36 +117,12 @@ view model =
                         [ text "December 2019 : Pour fêter Noël"
                         ]
                     , div [ class "row 50% uniform" ]
-                        [ div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_2019_12_01, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_2019_12_02, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u$" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_2019_12_03, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_2019_12_04, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_2019_12_05, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u$" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_2019_12_06, class "with-border" ] []
-                                ]
-                            ]
+                        [ setupImg "4u" model.session.images.gallery_2019_12_01
+                        , setupImg "4u" model.session.images.gallery_2019_12_02
+                        , setupImg "4u$" model.session.images.gallery_2019_12_03
+                        , setupImg "4u" model.session.images.gallery_2019_12_04
+                        , setupImg "4u" model.session.images.gallery_2019_12_05
+                        , setupImg "4u$" model.session.images.gallery_2019_12_06
                         ]
 
                     {--break--}
@@ -153,11 +131,7 @@ view model =
                         [ text "November 2019"
                         ]
                     , div [ class "row 50% uniform" ]
-                        [ div [ class "4u$" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_2019_11_01, class "with-border" ] []
-                                ]
-                            ]
+                        [ setupImg "4u$" model.session.images.gallery_2019_11_01
                         ]
 
                     {--break--}
@@ -166,11 +140,7 @@ view model =
                         [ text "September 2019"
                         ]
                     , div [ class "row 50% uniform" ]
-                        [ div [ class "4u$" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_01, class "with-border" ] []
-                                ]
-                            ]
+                        [ setupImg "4u$" model.session.images.gallery_01
                         ]
 
                     {--break--}
@@ -179,31 +149,11 @@ view model =
                         [ text "July 2019 : Boules tournament"
                         ]
                     , div [ class "row 50% uniform" ]
-                        [ div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_02, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_03, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u$" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_04, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_05, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u$" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_06, class "with-border" ] []
-                                ]
-                            ]
+                        [ setupImg "4u" model.session.images.gallery_02
+                        , setupImg "4u" model.session.images.gallery_03
+                        , setupImg "4u$" model.session.images.gallery_04
+                        , setupImg "4u" model.session.images.gallery_05
+                        , setupImg "4u$" model.session.images.gallery_06
                         ]
 
                     {--break--}
@@ -212,36 +162,12 @@ view model =
                         [ text "June 2019 : French evening"
                         ]
                     , div [ class "row 50% uniform" ]
-                        [ div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_07, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_08, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u$" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_09, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_10, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_11, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u$" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_12, class "with-border" ] []
-                                ]
-                            ]
+                        [ setupImg "4u" model.session.images.gallery_07
+                        , setupImg "4u" model.session.images.gallery_08
+                        , setupImg "4u$" model.session.images.gallery_09
+                        , setupImg "4u" model.session.images.gallery_10
+                        , setupImg "4u" model.session.images.gallery_11
+                        , setupImg "4u$" model.session.images.gallery_12
                         ]
 
                     {--break--}
@@ -250,16 +176,8 @@ view model =
                         [ text "April 2019 : Barcroft Primary School fashion show"
                         ]
                     , div [ class "row 50% uniform" ]
-                        [ div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_13, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u$" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_14, class "with-border" ] []
-                                ]
-                            ]
+                        [ setupImg "4u" model.session.images.gallery_13
+                        , setupImg "4u$" model.session.images.gallery_14
                         ]
 
                     {--break--}
@@ -268,26 +186,10 @@ view model =
                         [ text "March 2019 : Class visit to Nice"
                         ]
                     , div [ class "row 50% uniform" ]
-                        [ div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_15, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_16, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u$" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_17, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u$" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_18, class "with-border" ] []
-                                ]
-                            ]
+                        [ setupImg "4u" model.session.images.gallery_15
+                        , setupImg "4u" model.session.images.gallery_16
+                        , setupImg "4u$" model.session.images.gallery_17
+                        , setupImg "4u$" model.session.images.gallery_18
                         ]
 
                     {--break--}
@@ -296,16 +198,8 @@ view model =
                         [ text "January 2019"
                         ]
                     , div [ class "row 50% uniform" ]
-                        [ div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_19, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u$" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_20, class "with-border" ] []
-                                ]
-                            ]
+                        [ setupImg "4u" model.session.images.gallery_19
+                        , setupImg "4u$" model.session.images.gallery_20
                         ]
 
                     {--break--}
@@ -314,11 +208,7 @@ view model =
                         [ text "October 2018"
                         ]
                     , div [ class "row 50% uniform" ]
-                        [ div [ class "4u$" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_21, class "with-border" ] []
-                                ]
-                            ]
+                        [ setupImg "4u$" model.session.images.gallery_21
                         ]
 
                     {--break--}
@@ -327,36 +217,12 @@ view model =
                         [ text "July 2018"
                         ]
                     , div [ class "row 50% uniform" ]
-                        [ div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_22, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_23, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u$" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_24, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_25, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_26, class "with-border" ] []
-                                ]
-                            ]
-                        , div [ class "4u$" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_27, class "with-border" ] []
-                                ]
-                            ]
+                        [ setupImg "4u" model.session.images.gallery_22
+                        , setupImg "4u" model.session.images.gallery_23
+                        , setupImg "4u$" model.session.images.gallery_24
+                        , setupImg "4u" model.session.images.gallery_25
+                        , setupImg "4u" model.session.images.gallery_26
+                        , setupImg "4u$" model.session.images.gallery_27
                         ]
 
                     {--break--}
@@ -365,11 +231,7 @@ view model =
                         [ text "June 2018"
                         ]
                     , div [ class "row 50% uniform" ]
-                        [ div [ class "4u$" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_28, class "with-border" ] []
-                                ]
-                            ]
+                        [ setupImg "4u$" model.session.images.gallery_28
                         ]
 
                     {--break--}
@@ -378,11 +240,7 @@ view model =
                         [ text "February 2018"
                         ]
                     , div [ class "row 50% uniform" ]
-                        [ div [ class "4u$" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_29, class "with-border" ] []
-                                ]
-                            ]
+                        [ setupImg "4u$" model.session.images.gallery_29
                         ]
 
                     {--break--}
@@ -391,14 +249,11 @@ view model =
                         [ text "November 2017"
                         ]
                     , div [ class "row 50% uniform" ]
-                        [ div [ class "4u$" ]
-                            [ span [ class "image fit" ]
-                                [ img [ src model.session.images.gallery_30, class "with-border" ] []
-                                ]
-                            ]
+                        [ setupImg "4u$" model.session.images.gallery_30
                         ]
                     ]
                 ]
+            , modalView model
             ]
         ]
     , baseClass = "subpage"
