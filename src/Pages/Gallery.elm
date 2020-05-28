@@ -58,9 +58,7 @@ modalView : Model -> Html Msg
 modalView model =
     if model.isModalOpen then
         div [ class "modal-background" ]
-            [ span [ class "close", onClick HideModal ]
-                [ text "x"
-                ]
+            [ i [ class "fas fa-times modal-close", onClick HideModal ] []
             , img [ class "modal-content", src model.modalImg ] []
             ]
 

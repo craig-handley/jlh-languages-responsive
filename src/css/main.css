@@ -3075,18 +3075,16 @@ button:disabled,
 	max-width: 800px;
 }
 
-.close {
+.modal-close {
 	position: absolute;
-	top: 35px;
-	right: 35px;
+	top: 55px;
+	right: 30px;
 	color: #f1f1f1;
 	font-size: 40px;
-	font-weight: bold;
-	transition: 0.3s;
 }
 
-.close:hover,
-.close:focus {
+.modal-close:hover,
+.modal-close:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
