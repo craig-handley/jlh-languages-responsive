@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/favicon.ico"
   },
   {
-    "revision": "3e6c90ca586f53b864fe3582c0b18ac4",
+    "revision": "22ae0fbfb755840f91b34d3ea45397ba",
     "url": "/index.html"
   },
   {
@@ -32,20 +32,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/skel.min.js"
   },
   {
-    "revision": "0b0f794f3ab92b729ae6",
-    "url": "/static/css/main.09803eef.chunk.css"
+    "revision": "06dd59ad2e7598bb1ace",
+    "url": "/static/css/main.fd112b33.chunk.css"
   },
   {
-    "revision": "0b0f794f3ab92b729ae6",
-    "url": "/static/js/main.0b0f794f.chunk.js"
+    "revision": "06dd59ad2e7598bb1ace",
+    "url": "/static/js/main.06dd59ad.chunk.js"
   },
   {
     "revision": "1b922744246c39b6bc43",
     "url": "/static/js/runtime~main.1b922744.js"
   },
   {
-    "revision": "062c915b639e05c87cf7",
-    "url": "/static/js/vendors~main.062c915b.chunk.js"
+    "revision": "f4766118b2a6ad6eed6f",
+    "url": "/static/js/vendors~main.f4766118.chunk.js"
   },
   {
     "revision": "b585c5a78b86cc35a13f5006b66a8c0a",
@@ -62,6 +62,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3475564f19830b832b1728bc886ffdfc",
     "url": "/static/media/events_01.3475564f.png"
+  },
+  {
+    "revision": "dabab99b9f4febb62aae8eef24e3f428",
+    "url": "/static/media/fliss.dabab99b.jpg"
+  },
+  {
+    "revision": "372b32dd308bcda007203297e62ad87d",
+    "url": "/static/media/french_flyer.372b32dd.png"
   },
   {
     "revision": "15c35521550e867b3f34b11735ae0a2a",
@@ -248,6 +256,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/gallery_30.79f77d46.jpg"
   },
   {
+    "revision": "3b14824b8c03908e50300c76694966c7",
+    "url": "/static/media/general_blurb.3b14824b.png"
+  },
+  {
     "revision": "24f7d382169bb5eddb1788eb4dd40898",
     "url": "/static/media/gift_voucher_01.24f7d382.png"
   },
@@ -322,6 +334,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f4320027c37e5620222f4147c93ca1ac",
     "url": "/static/media/schools_spanish_04.f4320027.jpg"
+  },
+  {
+    "revision": "c97c0fdb7213631318b9d1adb53d38e4",
+    "url": "/static/media/spanish_flyer.c97c0fdb.png"
   },
   {
     "revision": "4588b15af81ccbeae8ef38b0ec690797",

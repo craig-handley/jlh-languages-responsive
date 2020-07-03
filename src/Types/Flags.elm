@@ -8,6 +8,7 @@ type alias Flags =
         { logo : String
         , banner : String
         , about_01 : String
+        , fliss : String
         , tutoring_01 : String
         , tutoring_02 : String
         , schools_french : String
@@ -80,6 +81,9 @@ type alias Flags =
         , pic04 : String
         , pic05 : String
         , pic06 : String
+        , french_flyer : String
+        , spanish_flyer : String
+        , general_blurb : String
         }
     , courses : List Course.Course
     }

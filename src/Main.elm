@@ -7,6 +7,8 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Pages.About as About
 import Pages.AdultCourses as AdultCourses
+import Pages.AdultCoursesFrench as AdultCoursesFrench
+import Pages.AdultCoursesSpanish as AdultCoursesSpanish
 import Pages.Events as Events
 import Pages.Gallery as Gallery
 import Pages.GiftVouchers as GiftVouchers
@@ -37,6 +39,8 @@ type Page
     | Home Home.Model
       -- | NewPage NewPage.Model
     | AdultCourses AdultCourses.Model
+    | AdultCoursesFrench AdultCoursesFrench.Model
+    | AdultCoursesSpanish AdultCoursesSpanish.Model
     | About About.Model
     | Tutoring Tutoring.Model
     | Schools Schools.Model
@@ -78,6 +82,8 @@ type Msg
     | HomeMsg Home.Msg
       -- | NewPageMsg NewPage.Msg
     | AdultCoursesMsg AdultCourses.Msg
+    | AdultCoursesFrenchMsg AdultCoursesFrench.Msg
+    | AdultCoursesSpanishMsg AdultCoursesSpanish.Msg
     | AboutMsg About.Msg
     | TutoringMsg Tutoring.Msg
     | SchoolsMsg Schools.Msg
@@ -137,6 +143,22 @@ update message model =
             case model.page of
                 AdultCourses m ->
                     mapAdultCoursesMsg model (AdultCourses.update msg m)
+
+                _ ->
+                    ( model, Cmd.none )
+
+        AdultCoursesFrenchMsg msg ->
+            case model.page of
+                AdultCoursesFrench m ->
+                    mapAdultCoursesFrenchMsg model (AdultCoursesFrench.update msg m)
+
+                _ ->
+                    ( model, Cmd.none )
+
+        AdultCoursesSpanishMsg msg ->
+            case model.page of
+                AdultCoursesSpanish m ->
+                    mapAdultCoursesSpanishMsg model (AdultCoursesSpanish.update msg m)
 
                 _ ->
                     ( model, Cmd.none )
@@ -242,6 +264,12 @@ view model =
         AdultCourses m ->
             Viewer.view session AdultCoursesMsg (AdultCourses.view m)
 
+        AdultCoursesFrench m ->
+            Viewer.view session AdultCoursesFrenchMsg (AdultCoursesFrench.view m)
+
+        AdultCoursesSpanish m ->
+            Viewer.view session AdultCoursesSpanishMsg (AdultCoursesSpanish.view m)
+
         Tutoring m ->
             Viewer.view session TutoringMsg (Tutoring.view m)
 
@@ -312,6 +340,16 @@ mapAdultCoursesMsg model ( m, cmds ) =
     ( { model | page = AdultCourses m }, Cmd.map AdultCoursesMsg cmds )
 
 
+mapAdultCoursesFrenchMsg : Model -> ( AdultCoursesFrench.Model, Cmd AdultCoursesFrench.Msg ) -> ( Model, Cmd Msg )
+mapAdultCoursesFrenchMsg model ( m, cmds ) =
+    ( { model | page = AdultCoursesFrench m }, Cmd.map AdultCoursesFrenchMsg cmds )
+
+
+mapAdultCoursesSpanishMsg : Model -> ( AdultCoursesSpanish.Model, Cmd AdultCoursesSpanish.Msg ) -> ( Model, Cmd Msg )
+mapAdultCoursesSpanishMsg model ( m, cmds ) =
+    ( { model | page = AdultCoursesSpanish m }, Cmd.map AdultCoursesSpanishMsg cmds )
+
+
 mapTutoringMsg : Model -> ( Tutoring.Model, Cmd Tutoring.Msg ) -> ( Model, Cmd Msg )
 mapTutoringMsg model ( m, cmds ) =
     ( { model | page = Tutoring m }, Cmd.map TutoringMsg cmds )
@@ -378,6 +416,12 @@ extractSession model =
         AdultCourses m ->
             m.session
 
+        AdultCoursesFrench m ->
+            m.session
+
+        AdultCoursesSpanish m ->
+            m.session
+
         Tutoring m ->
             m.session
 
@@ -427,6 +471,12 @@ updateSession model session =
 
         AdultCourses m ->
             mapAdultCoursesMsg model (AdultCourses.init session)
+
+        AdultCoursesFrench m ->
+            mapAdultCoursesFrenchMsg model (AdultCoursesFrench.init session)
+
+        AdultCoursesSpanish m ->
+            mapAdultCoursesSpanishMsg model (AdultCoursesSpanish.init session)
 
         Tutoring m ->
             mapTutoringMsg model (Tutoring.init session)
@@ -501,6 +551,10 @@ parser model session =
             (mapAboutMsg model (About.init session))
         , route (Parser.s paths.adultCourses)
             (mapAdultCoursesMsg model (AdultCourses.init session))
+        , route (Parser.s paths.adultCoursesFrench)
+            (mapAdultCoursesFrenchMsg model (AdultCoursesFrench.init session))
+        , route (Parser.s paths.adultCoursesSpanish)
+            (mapAdultCoursesSpanishMsg model (AdultCoursesSpanish.init session))
         , route (Parser.s paths.tutoring)
             (mapTutoringMsg model (Tutoring.init session))
         , route (Parser.s paths.schools)
@@ -530,6 +584,8 @@ paths =
     { home = ""
     , about = "about"
     , adultCourses = "adult-courses"
+    , adultCoursesFrench = "adult-courses-french"
+    , adultCoursesSpanish = "adult-courses-spanish"
     , tutoring = "tutoring"
     , schools = "schools"
     , events = "events"
