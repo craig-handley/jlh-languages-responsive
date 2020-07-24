@@ -28,6 +28,21 @@ type alias Flags =
         , testimonials_03 : String
         , testimonials_04 : String
         , gift_voucher_01 : String
+        , gallery_poems_01 : String
+        , gallery_poems_02 : String
+        , gallery_poems_03 : String
+        , gallery_poems_04 : String
+        , gallery_poems_04_01 : String
+        , gallery_poems_04_02 : String
+        , gallery_poems_05 : String
+        , gallery_poems_06 : String
+        , gallery_poems_07 : String
+        , gallery_poems_08 : String
+        , gallery_poems_09 : String
+        , gallery_poems_10 : String
+        , gallery_poems_11 : String
+        , gallery_poems_12 : String
+        , gallery_poems_13 : String
         , gallery_01 : String
         , gallery_02 : String
         , gallery_03 : String

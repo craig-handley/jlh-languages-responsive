@@ -26,6 +26,21 @@ import testimonials_02 from "./img/testimonials_02.jpg";
 import testimonials_03 from "./img/testimonials_03.png";
 import testimonials_04 from "./img/testimonials_04.png";
 import gift_voucher_01 from "./img/gift_voucher_01.png";
+import gallery_poems_01 from "./img/gallery_poems_01.png";
+import gallery_poems_02 from "./img/gallery_poems_02.png";
+import gallery_poems_03 from "./img/gallery_poems_03.png";
+import gallery_poems_04 from "./img/gallery_poems_04.png";
+import gallery_poems_04_01 from "./img/gallery_poems_04_01.png";
+import gallery_poems_04_02 from "./img/gallery_poems_04_02.png";
+import gallery_poems_05 from "./img/gallery_poems_05.png";
+import gallery_poems_06 from "./img/gallery_poems_06.png";
+import gallery_poems_07 from "./img/gallery_poems_07.png";
+import gallery_poems_08 from "./img/gallery_poems_08.png";
+import gallery_poems_09 from "./img/gallery_poems_09.png";
+import gallery_poems_10 from "./img/gallery_poems_10.jpg";
+import gallery_poems_11 from "./img/gallery_poems_11.jpg";
+import gallery_poems_12 from "./img/gallery_poems_12.jpg";
+import gallery_poems_13 from "./img/gallery_poems_13.png";
 import gallery_01 from "./img/gallery_01.jpg";
 import gallery_02 from "./img/gallery_02.jpg";
 import gallery_03 from "./img/gallery_03.jpg";
@@ -116,6 +131,21 @@ function generateFlags() {
       testimonials_03,
       testimonials_04,
       gift_voucher_01,
+      gallery_poems_01,
+      gallery_poems_02,
+      gallery_poems_03,
+      gallery_poems_04,
+      gallery_poems_04_01,
+      gallery_poems_04_02,
+      gallery_poems_05,
+      gallery_poems_06,
+      gallery_poems_07,
+      gallery_poems_08,
+      gallery_poems_09,
+      gallery_poems_10,
+      gallery_poems_11,
+      gallery_poems_12,
+      gallery_poems_13,
       gallery_01,
       gallery_02,
       gallery_03,

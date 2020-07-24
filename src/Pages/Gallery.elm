@@ -88,6 +88,29 @@ view model =
                     ]
                 , div [ class "box alt" ]
                     [ h3 [ class "align-left" ]
+                        [ text "July 2020 : La fête de la poésie"
+                        ]
+                    , div [ class "row 50% uniform" ]
+                        [ setupImg "4u" model.session.images.gallery_poems_01
+                        , setupImg "4u" model.session.images.gallery_poems_02
+                        , setupImg "4u$" model.session.images.gallery_poems_03
+                        , setupImg "4u" model.session.images.gallery_poems_04
+                        , setupImg "4u" model.session.images.gallery_poems_04_01
+                        , setupImg "4u$" model.session.images.gallery_poems_04_02
+                        , setupImg "4u" model.session.images.gallery_poems_05
+                        , setupImg "4u" model.session.images.gallery_poems_06
+                        , setupImg "4u$" model.session.images.gallery_poems_07
+                        , setupImg "4u" model.session.images.gallery_poems_08
+                        , setupImg "4u" model.session.images.gallery_poems_09
+                        , setupImg "4u$" model.session.images.gallery_poems_10
+                        , setupImg "4u" model.session.images.gallery_poems_11
+                        , setupImg "4u" model.session.images.gallery_poems_12
+                        , setupImg "4u$" model.session.images.gallery_poems_13
+                        ]
+
+                    {--break--}
+                    , br [] []
+                    , h3 [ class "align-left" ]
                         [ text "March 2020"
                         ]
                     , div [ class "row 50% uniform" ]
