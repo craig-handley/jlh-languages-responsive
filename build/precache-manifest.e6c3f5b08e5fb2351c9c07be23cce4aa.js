@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/favicon.ico"
   },
   {
-    "revision": "22ae0fbfb755840f91b34d3ea45397ba",
+    "revision": "f2709095388c5d36d472cb963395133d",
     "url": "/index.html"
   },
   {
@@ -32,20 +32,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/skel.min.js"
   },
   {
-    "revision": "06dd59ad2e7598bb1ace",
+    "revision": "687349748314c1f9cae9",
     "url": "/static/css/main.fd112b33.chunk.css"
   },
   {
-    "revision": "06dd59ad2e7598bb1ace",
-    "url": "/static/js/main.06dd59ad.chunk.js"
+    "revision": "687349748314c1f9cae9",
+    "url": "/static/js/main.68734974.chunk.js"
   },
   {
     "revision": "1b922744246c39b6bc43",
     "url": "/static/js/runtime~main.1b922744.js"
   },
   {
-    "revision": "f4766118b2a6ad6eed6f",
-    "url": "/static/js/vendors~main.f4766118.chunk.js"
+    "revision": "4994715eeff88e6e2e48",
+    "url": "/static/js/vendors~main.4994715e.chunk.js"
   },
   {
     "revision": "b585c5a78b86cc35a13f5006b66a8c0a",
@@ -254,6 +254,66 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "79f77d465304b4e7b137d5d803297507",
     "url": "/static/media/gallery_30.79f77d46.jpg"
+  },
+  {
+    "revision": "1fcfa7c45acd5ad052905447b1be3b9c",
+    "url": "/static/media/gallery_poems_01.1fcfa7c4.png"
+  },
+  {
+    "revision": "7906d04a14a82e0c91cc20c80d485260",
+    "url": "/static/media/gallery_poems_02.7906d04a.png"
+  },
+  {
+    "revision": "96370321c08e1d66d50aeaaf89fb3d6e",
+    "url": "/static/media/gallery_poems_03.96370321.png"
+  },
+  {
+    "revision": "e0dc12c1f961c5a1cd93d6881b02bad6",
+    "url": "/static/media/gallery_poems_04.e0dc12c1.png"
+  },
+  {
+    "revision": "f4e6a3192e87479c44800eef2e9d2cbc",
+    "url": "/static/media/gallery_poems_04_01.f4e6a319.png"
+  },
+  {
+    "revision": "47f4ef7d966697393f5df39b64b9d553",
+    "url": "/static/media/gallery_poems_04_02.47f4ef7d.png"
+  },
+  {
+    "revision": "720c57465d0bff0c20a0c814b4c6e026",
+    "url": "/static/media/gallery_poems_05.720c5746.png"
+  },
+  {
+    "revision": "477d8e2b3586dba23c3364a8345f3773",
+    "url": "/static/media/gallery_poems_06.477d8e2b.png"
+  },
+  {
+    "revision": "f647cc6cf9551e5d81b0b8025081062a",
+    "url": "/static/media/gallery_poems_07.f647cc6c.png"
+  },
+  {
+    "revision": "5776b375b2a433cd5bdaab801ccc3902",
+    "url": "/static/media/gallery_poems_08.5776b375.png"
+  },
+  {
+    "revision": "6f3f878d1b7b6910f2d62b4a0eff1967",
+    "url": "/static/media/gallery_poems_09.6f3f878d.png"
+  },
+  {
+    "revision": "606d81781053094168ae6a43c1580aff",
+    "url": "/static/media/gallery_poems_10.606d8178.jpg"
+  },
+  {
+    "revision": "5b1a5c4e22e666dde398918faa94b92b",
+    "url": "/static/media/gallery_poems_11.5b1a5c4e.jpg"
+  },
+  {
+    "revision": "832376c902b0087adf4c6dd141fbdd43",
+    "url": "/static/media/gallery_poems_12.832376c9.jpg"
+  },
+  {
+    "revision": "5f14fbe3b0ee9f0cb8c344acf9cbda6c",
+    "url": "/static/media/gallery_poems_13.5f14fbe3.png"
   },
   {
     "revision": "3b14824b8c03908e50300c76694966c7",
