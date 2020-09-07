@@ -1,7 +1,7 @@
 {
   "main.css": "/static/css/main.fd112b33.chunk.css",
   "main.js": "/main.js",
-  "main.js.map": "/static/js/main.68734974.chunk.js.map",
+  "main.js.map": "/static/js/main.64d4fb19.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.1b922744.js",
   "runtime~main.js.map": "/static/js/runtime~main.1b922744.js.map",
   "vendors~main.js": "/static/js/vendors~main.4994715e.chunk.js",
@@ -13,7 +13,7 @@
   "jquery.min.js": "/jquery.min.js",
   "logo.svg": "/logo.svg",
   "manifest.json": "/manifest.json",
-  "precache-manifest.e6c3f5b08e5fb2351c9c07be23cce4aa.js": "/precache-manifest.e6c3f5b08e5fb2351c9c07be23cce4aa.js",
+  "precache-manifest.db7a02bbd55871c0ec0030d00bda5b63.js": "/precache-manifest.db7a02bbd55871c0ec0030d00bda5b63.js",
   "skel.min.js": "/skel.min.js",
   "static/media/about_01.jpg": "/static/media/about_01.b585c5a7.jpg",
   "static/media/adult_courses_01.jpg": "/static/media/adult_courses_01.c905bb12.jpg",

@@ -98,7 +98,7 @@ view model =
                     [ article []
                         [ header []
                             [ h3 []
-                                [ text "Current course timetable"
+                                [ text "Face-to-face lessons starting September 2020"
                                 ]
                             ]
                         ]

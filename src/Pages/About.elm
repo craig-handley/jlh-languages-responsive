@@ -64,7 +64,7 @@ view model =
                         , p [] [ text "My name is Jane Handley and I am passionate about languages." ]
                         , p [] [ text "I have 20 years' experience of teaching French and German in secondary schools and primary schools as well as teaching adults in commercial settings." ]
                         , p [] [ text "I have spent extended periods living and working abroad. I have worked in Tübingen (Germany), Paris, Strasbourg, Monaco, Singapore and Nigeria." ]
-                        , p [] [ text "I setup JLH Languages in 2017 to spread the joy of language learning in an innovative and effective way." ]
+                        , p [] [ text "I set up JLH Languages in 2017 to spread the joy of language learning in an innovative and effective way." ]
                         , div [ class "image fit", style "width" "10em" ]
                             [ img [ src model.session.images.about_01 ] []
                             ]
