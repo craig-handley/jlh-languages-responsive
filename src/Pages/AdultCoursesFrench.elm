@@ -93,12 +93,12 @@ view model =
 
                     --, p [] [ text "Aliquam erat volutpat nam dui " ]
                     ]
-                , h3 [ style "color" "red" ] [ text "Unfortunately due to Coronavirus our face-to-face lessons are currently suspended. However lessons continue to take place online. Please email jane@jlhlanguages.org for details." ]
+                , h3 [ style "color" "red" ] [ text "Due to Coronavirus most lessons take place online. Please email jane@jlhlanguages.org for details." ]
                 , div [ class "flex flex-1" ]
                     [ article []
                         [ header []
                             [ h3 []
-                                [ text "Face-to-face lessons starting September 2020"
+                                [ text "Face-to-face lessons starting October 2020"
                                 ]
                             ]
                         ]
@@ -107,7 +107,7 @@ view model =
                 , div [ class "flex flex-1" ]
                     [ article []
                         [ p [] [ text "* Advanced Conversation: For fluent or near-fluent speakers of French. Come along and chat or discuss the issues of the day." ]
-                        , p [] [ text "** Improvers: Learners have a sound grasp of French grammar and want to improve their spoken French in order to communicate effectively in the language." ]
+                        , p [] [ text "** Intermediate: For learners with good gramatical knowledge who want to improve their fluency." ]
                         , p [] [ text "First session free." ]
                         , p [] [ text "If you are interested in attending a course at any of these locations please get in touch (jane@jlhlanguages.org / 07793 556020) stating the venue(s) of interest and the relevant French course (beginner / mixed ability / intermediate / advanced.)" ]
                         , p [] [ text "If none of these locations are suitable please send details of a town / village near you and we will do our best to accommodate your request." ]
