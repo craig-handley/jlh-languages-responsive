@@ -1,36 +1,12 @@
 [
     {
-        "day": "Wednesday 7th October",
-        "time": "13.30 - 15.00pm",
-        "location": "Cheslyn Hay Village Hall, WS6 7HP",
-        "abilityLevel": "Intermediate **"
-    },
-    {
-        "day": "Wednesday 7th October",
-        "time": "15.30 - 16.30pm",
-        "location": "Cheslyn Hay Village Hall, WS6 7HP",
-        "abilityLevel": "Advanced conversation *"
-    },
-    {
-        "day": "Thursday 1st October",
-        "time": "10.00 - 11.00am",
-        "location": "Pelsall Village Centre, WS6 4LX",
-        "abilityLevel": "Beginner / Mixed Ability"
-    },
-    {
-        "day": "Thursday 1st October",
-        "time": "11.30 - 12.30pm",
-        "location": "Pelsall Village Centre, WS6 4LX",
-        "abilityLevel": "Intermediate ** / Advanced Class"
-    },
-    {
-        "day": "Friday 2nd October",
+        "day": "Friday 16th October",
         "time": "12.00 - 13.00pm",
         "location": "Cheslyn Hay Village Hall, WS6 7HP",
         "abilityLevel": "Beginner / Mixed Ability"
     },
     {
-        "day": "Friday 2nd October",
+        "day": "Friday",
         "time": "1.30 - 3.00pm",
         "location": "Cheslyn Hay Village Hall, WS6 7HP",
         "abilityLevel": "Mixed Ability / Intermediate **"
