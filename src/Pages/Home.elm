@@ -75,9 +75,11 @@ view model =
                                 [ text "French Lessons on Zoom"
                                 ]
                             ]
-                        , video
-                            [ width 560, height 315, src model.session.images.jh_tv, type_ "video/mp4", controls True ]
-                            []
+                        , div [ class "video-size" ]
+                            [ video
+                                [ src model.session.images.jh_tv, type_ "video/mp4", controls True ]
+                                []
+                            ]
                         , p [] []
                         , footer []
                             [ a [ href "/adult-courses-french", class "button special" ]
