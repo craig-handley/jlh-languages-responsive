@@ -1,14 +1,56 @@
 [
     {
-        "day": "Friday 16th October",
-        "time": "12.00 - 13.00pm",
-        "location": "Cheslyn Hay Village Hall, WS6 7HP",
+        "day": "Wednesday",
+        "time": "10.30am - 11.30am",
+        "location": "Zoom",
         "abilityLevel": "Beginner / Mixed Ability"
     },
     {
-        "day": "Friday",
-        "time": "1.30 - 3.00pm",
-        "location": "Cheslyn Hay Village Hall, WS6 7HP",
+        "day": "Wednesday",
+        "time": "12.00 - 1.00pm",
+        "location": "Zoom",
+        "abilityLevel": "Beginners"
+    },
+    {
+        "day": "Wednesday",
+        "time": "3.00pm - 4.00pm",
+        "location": "Zoom",
+        "abilityLevel": "Advanced Conversation *"
+    },
+    {
+        "day": "Thursday",
+        "time": "1.30pm - 2.30pm",
+        "location": "Zoom",
         "abilityLevel": "Mixed Ability / Intermediate **"
+    },
+    {
+        "day": "Thursday",
+        "time": "3.00pm - 4.00pm",
+        "location": "Zoom",
+        "abilityLevel": "Advanced Conversation *"
+    },
+    {
+        "day": "Thursday",
+        "time": "4.30pm - 5.30pm",
+        "location": "Zoom",
+        "abilityLevel": "Mixed Ability / Intermediate **"
+    },
+    {
+        "day": "Thursday",
+        "time": "7.00pm - 8.00pm",
+        "location": "Zoom",
+        "abilityLevel": "Mixed Ability / Intermediate **"
+    },
+    {
+        "day": "Friday",
+        "time": "12.00 - 1.00pm",
+        "location": "Zoom",
+        "abilityLevel": "Beginners"
+    },
+    {
+        "day": "Friday",
+        "time": "1.30pm - 2.30pm",
+        "location": "Zoom",
+        "abilityLevel": "Intermediate **"
     }
 ]

@@ -100,6 +100,8 @@ import french_flyer from "./img/french_flyer.png";
 import spanish_flyer from "./img/spanish_flyer.png";
 import general_blurb from "./img/general_blurb.png";
 
+import jh_tv from "./img/jlh_tv.mp4";
+
 Elm.Main.init({
   flags: generateFlags(),
   node: document.getElementById("root"),
@@ -204,6 +206,8 @@ function generateFlags() {
       french_flyer,
       spanish_flyer,
       general_blurb,
+
+      jh_tv,
     },
     courses,
   };

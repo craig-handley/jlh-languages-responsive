@@ -5,6 +5,7 @@ import Browser.Events
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events
+import Json.Encode
 import Session
 import Utils exposing (..)
 import Viewer
@@ -71,11 +72,26 @@ view model =
                     [ article []
                         [ header []
                             [ h3 []
-                                [ text "Adult Courses"
+                                [ text "French Lessons on Zoom"
+                                ]
+                            ]
+                        , video
+                            [ width 560, height 315, src model.session.images.jh_tv, type_ "video/mp4", controls True ]
+                            []
+                        , p [] []
+                        , footer []
+                            [ a [ href "/adult-courses-french", class "button special" ]
+                                [ text "More"
+                                ]
+                            ]
+                        , p [] []
+                        , header []
+                            [ h3 []
+                                [ text "Adult Courses in French and Spanish"
                                 ]
                             ]
                         , p []
-                            [ text "JLH Languages teaches French to adults as a type of \"brain gym.\""
+                            [ text "JLH Languages teaches French and Spanish to adults as a type of \"brain gym.\""
                             ]
                         , p []
                             [ text "Everyone wants to live a healthy life for longer: there is increasing scientific evidence that suggests that we need to exercise our brain as well as our body. Factors that help to keep our brain in good shape are:"
