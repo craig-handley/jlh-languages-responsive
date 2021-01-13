@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/favicon.ico"
   },
   {
-    "revision": "b32ee18c9698ed361ff034590a77c03e",
+    "revision": "464e8dbd2b520dc1b51835b9643f9130",
     "url": "/index.html"
   },
   {
@@ -32,12 +32,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/skel.min.js"
   },
   {
-    "revision": "f03d159ab386933df3a4",
+    "revision": "8ff2d457e8933f441c37",
     "url": "/static/css/main.a83a6ade.chunk.css"
   },
   {
-    "revision": "f03d159ab386933df3a4",
-    "url": "/static/js/main.f03d159a.chunk.js"
+    "revision": "8ff2d457e8933f441c37",
+    "url": "/static/js/main.8ff2d457.chunk.js"
   },
   {
     "revision": "1b922744246c39b6bc43",
@@ -322,6 +322,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c2a03683835571ed7bc49dcb710015c3",
     "url": "/static/media/gift_voucher_01.0e64d575.png"
+  },
+  {
+    "revision": "c09612bb901a7553e768f9bd7821e1fe",
+    "url": "/static/media/home_schooling.bc8c23e9.png"
   },
   {
     "revision": "c27bb5c0790a7375ad8c675e741410a6",
