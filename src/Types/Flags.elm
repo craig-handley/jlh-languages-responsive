@@ -100,6 +100,7 @@ type alias Flags =
         , spanish_flyer : String
         , general_blurb : String
         , jh_tv : String
+        , home_schooling : String
         }
     , courses : List Course.Course
     }

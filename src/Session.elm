@@ -101,6 +101,7 @@ type alias Session =
         , spanish_flyer : String
         , general_blurb : String
         , jh_tv : String
+        , home_schooling : String
         }
     , courses : List Types.Course.Course
     }

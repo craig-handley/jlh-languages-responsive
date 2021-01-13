@@ -102,6 +102,8 @@ import general_blurb from "./img/general_blurb.png";
 
 import jh_tv from "./img/jlh_tv.mp4";
 
+import home_schooling from "./img/home_schooling.png";
+
 Elm.Main.init({
   flags: generateFlags(),
   node: document.getElementById("root"),
@@ -208,6 +210,8 @@ function generateFlags() {
       general_blurb,
 
       jh_tv,
+
+      home_schooling,
     },
     courses,
   };

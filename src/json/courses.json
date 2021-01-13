@@ -1,33 +1,27 @@
 [
     {
-        "day": "Monday 4th January",
-        "time": "5.15pm - 6.15pm",
+        "day": "Monday 18th January",
+        "time": "4.00pm - 5.00pm",
         "location": "Zoom",
         "abilityLevel": "Free taster session - all abilities"
     },
     {
-        "day": "Tuesday 5th January",
-        "time": "10.15am - 11.15am",
-        "location": "Zoom",
-        "abilityLevel": "Free taster session - all abilities"
-    },
-    {
-        "day": "Wednesday 6th January",
-        "time": "10.30am - 11.30am",
-        "location": "Zoom",
-        "abilityLevel": "Free taster session - all abilities"
-    },
-    {
-        "day": "Thursday 7th January",
+        "day": "Thursday 21st January",
         "time": "3.00pm - 4.00pm",
         "location": "Zoom",
         "abilityLevel": "Free taster session - all abilities"
     },
     {
-        "day": "Friday 8th January",
+        "day": "Friday 22nd January",
         "time": "12.00 - 1.00pm",
         "location": "Zoom",
         "abilityLevel": "Free taster session - all abilities"
+    },
+    {
+        "day": "Monday",
+        "time": "5.15pm - 6.15pm",
+        "location": "Zoom",
+        "abilityLevel": "Beginners - new class"
     },
     {
         "day": "Monday",
